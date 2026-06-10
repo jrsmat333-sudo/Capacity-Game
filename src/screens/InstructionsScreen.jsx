@@ -173,7 +173,7 @@ export default function InstructionsScreen({ onReady }) {
         {/* CTA Button */}
         <button
           onClick={onReady}
-          className="w-full relative group animate-fade-in-up delay-700 mb-24"
+          className="w-full relative group animate-fade-in-up delay-700 mb-36"
         >
           <div
             className="w-full py-4 rounded-xl font-black text-lg tracking-wider text-[#1A0508] uppercase shimmer-btn shadow-2xl transition-transform duration-200 group-hover:scale-[1.02] group-active:scale-98 text-center"
@@ -240,7 +240,7 @@ export default function InstructionsScreen({ onReady }) {
               src="/img/neko-puce.png"
               alt="Neko PUCE"
               className="h-24 object-contain"
-              style={{ filter: 'drop-shadow(0 -4px 16px rgba(122,25,48,0.6))' }}
+              style={{ filter: 'drop-shadow(0 -4px 16px rgba(122,25,48,0.6))', marginBottom: '-40px' }}
             />
           </div>
         </div>

@@ -4,20 +4,26 @@ const COUNTDOWN_TOTAL = 7
 
 const DIALOGUES = [
   "Gran trabajo, agente. Cada sección superada te acerca a ser un experto en ciberseguridad.",
-  "Tu puedes. Prepárate para la siguiente sección.",
+  "Tú puedes. Prepárate para la siguiente sección.",
+]
+
+const LAST_DIALOGUES = [
+  "¡Excelente trabajo, agente! Has completado todos los desafíos del entrenamiento.",
+  "El juego ha finalizado. Ahora podrás ver tus resultados y descubrir tu nivel como detector de phishing.",
 ]
 
 export default function SectionTransition({ sectionNum, sectionEarned, totalScore, totalSections, onNext }) {
   const [countdown, setCountdown] = useState(COUNTDOWN_TOTAL)
   const [dialogueIdx, setDialogueIdx] = useState(0)
   const isLast = sectionNum >= totalSections
+  const activeDialogues = isLast ? LAST_DIALOGUES : DIALOGUES
 
   useEffect(() => {
     const t = setTimeout(() => {
-      if (dialogueIdx < DIALOGUES.length - 1) setDialogueIdx(d => d + 1)
+      if (dialogueIdx < activeDialogues.length - 1) setDialogueIdx(d => d + 1)
     }, 2800)
     return () => clearTimeout(t)
-  }, [dialogueIdx])
+  }, [dialogueIdx, activeDialogues.length])
 
   useEffect(() => {
     if (countdown <= 0) { onNext(); return }
@@ -102,7 +108,7 @@ export default function SectionTransition({ sectionNum, sectionEarned, totalScor
           }}
         >
           <span className="text-[#C9A84C] text-lg mr-1">"</span>
-          {DIALOGUES[dialogueIdx]}
+          {activeDialogues[dialogueIdx]}
           <span className="text-[#C9A84C] text-lg ml-1">"</span>
         </div>
       </div>
