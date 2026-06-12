@@ -120,7 +120,7 @@ export default function WelcomeScreen({ onStart }) {
           Dirección de Informática - Seguridad de la Información
         </p>
         <h1 className="text-4xl md:text-5xl font-black text-white leading-tight">
-          Guardian {' '}
+          Guardián {' '}
           <span
             className="text-transparent bg-clip-text"
             style={{ backgroundImage: 'linear-gradient(135deg, #C9A84C, #F0D080, #A07830)' }}

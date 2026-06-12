@@ -6,7 +6,7 @@ const TOTAL_TIME = 40
 const EMAIL_META = {
   from: 'Dirección de Informática',
   fromEmail: 'soporte@puce.edu.ec',
-  subject: 'Portal academico actualizado — informacion importante',
+  subject: 'Portal académico actualizado — información importante',
   date: 'Mar 10 Jun 2025 · 14:22',
 }
 

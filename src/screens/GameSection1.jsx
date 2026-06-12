@@ -10,7 +10,7 @@ const CARDS = [
     id: 'real',
     senderName: 'Dirección de Informática',
     senderEmail: 'soporte@puce.edu.ec',
-    subject: 'Recordatorio: Actualización de contraseña institucional',
+    subject: 'Recordatorio de actualización de contraseña institucional',
     body: 'Estimado/a miembro de la comunidad PUCE, le informamos que su contraseña de acceso al portal institucional debe ser actualizada antes del viernes 13 de junio. Ingrese a su portal académico y siga las instrucciones en la sección Seguridad de cuenta. Atentamente, Dirección de Informática — PUCE.',
     logo: '/img/logo-verdadero.png',
     isFake: false,

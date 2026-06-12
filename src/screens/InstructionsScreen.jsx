@@ -4,12 +4,12 @@ const RULES = [
   {
     number: '01',
     title: 'Observa con atención',
-    body: 'En cada ronda verás una situación real. Tu trabajo es identificar qué es sospechoso.'
+    body: 'En cada ronda verás una situación real. Tu trabajo es identificar que es sospechoso.'
   },
   {
     number: '02',
     title: 'El tiempo corre',
-    body: 'Tienes tiempo limitado en cada ronda. Actúa rápido pero sin perder el detalle.'
+    body: 'Tienes tiempo limitado en cada ronda. Actúa rápido pero se cuidadoso.'
   },
 ]
 
@@ -93,9 +93,9 @@ export default function InstructionsScreen({ onReady }) {
             Antes de empezar
           </p>
           <h2 className="text-3xl md:text-4xl font-black text-white">
-            Como se{' '}
+            Cómo se{' '}
             <span className="text-transparent bg-clip-text" style={{ backgroundImage: 'linear-gradient(135deg, #C9A84C, #F0D080)' }}>
-              juega
+              juega?
             </span>
           </h2>
         </div>
@@ -165,7 +165,7 @@ export default function InstructionsScreen({ onReady }) {
               style={{ background: 'rgba(201,168,76,0.12)', border: '1px solid rgba(201,168,76,0.25)' }}
             >
               <div className="text-[#C9A84C] font-black text-lg">+50</div>
-              <div className="text-[#A09070] text-xs mt-0.5">Rapido</div>
+              <div className="text-[#A09070] text-xs mt-0.5">Rápido</div>
             </div>
           </div>
         </div>

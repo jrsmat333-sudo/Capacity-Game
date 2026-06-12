@@ -65,7 +65,7 @@ export default function SectionTransition({ sectionNum, sectionEarned, totalScor
             boxShadow: '0 0 20px rgba(201,168,76,0.2)',
           }}
         >
-          Seccion {sectionNum} {isLast ? 'Completada' : 'Superada'}
+          Sección {sectionNum} {isLast ? 'Completada' : 'Superada'}
         </div>
       </div>
 
@@ -154,7 +154,7 @@ export default function SectionTransition({ sectionNum, sectionEarned, totalScor
         <div
           className="px-10 py-3.5 rounded-xl font-black tracking-wider text-[#1A0508] uppercase shimmer-btn shadow-xl transition-transform duration-200 group-hover:scale-105 group-active:scale-95"
         >
-          {isLast ? 'Ver Resultados' : 'Siguiente Seccion'}
+          {isLast ? 'Ver Resultados' : 'Siguiente Sección'}
         </div>
         <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-40 blur-xl bg-[#C9A84C] -z-10 transition-opacity duration-300" />
       </button>

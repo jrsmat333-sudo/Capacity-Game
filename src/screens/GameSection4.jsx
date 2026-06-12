@@ -6,7 +6,6 @@ const BASE_MAX = 150
 
 const ZONES = [
   { id: 1, suspicious: true,  label: 'Remitente falso',              reason: 'El dominio "puce-becas-quito.com" no es el oficial. El correo institucional de becas usa @puce.edu.ec.' },
-  { id: 2, suspicious: true,  label: 'Saludo genérico',              reason: '"Estimada/o Estudiante" revela que el atacante no conoce tu nombre. Los correos institucionales te nombran directamente.' },
   { id: 3, suspicious: true,  label: 'Solicitud de pago fraudulenta', reason: 'La PUCE nunca solicita pagos de "diferencial de IVA" ni valores adicionales para confirmar una beca. Esto es una táctica de estafa.' },
   { id: 4, suspicious: true,  label: 'URL maliciosa',                reason: '"becas-puce.pagos-seguros.net" no es un dominio oficial de la PUCE. Nunca ingreses datos bancarios en este sitio.' },
   { id: 5, suspicious: true,  label: 'Urgencia artificial',          reason: '"48 horas o tu beca será reasignada" busca que actúes impulsivamente sin verificar la información con la institución.' },
@@ -141,7 +140,7 @@ export default function GameSection4({ score, onComplete }) {
           {/* Body */}
           <div className="px-4 py-4 space-y-3 text-sm leading-relaxed text-[#D8C4CC]">
             <p>
-              <ZoneSpan id={2} {...zProps}><span className="font-semibold text-[#D0B0C0]">Estimada/o Estudiante</span></ZoneSpan>,
+              <span className="font-semibold text-[#D0B0C0]">Estimada/o Estudiante</span>,
             </p>
             <p>
               Recibe un cordial saludo. Esperamos que te encuentres muy bien.

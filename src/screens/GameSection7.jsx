@@ -6,13 +6,13 @@ const BASE_MAX = 150
 
 const ZONES = [
   { id: 1, suspicious: true,  label: 'Logo falso',                    reason: 'El logo en la cabecera no es el oficial de la PUCE. Los documentos institucionales siempre usan el logo y colores oficiales verificados.' },
-  { id: 2, suspicious: true,  label: 'Numeración de oficio inválida', reason: 'El formato del número de oficio no sigue el estándar institucional de la PUCE. Los números oficiales tienen una estructura consistente y verificable.' },
-  { id: 3, suspicious: true,  label: 'Saludo genérico',               reason: '"Estimado/a Estudiante" indica que el emisor no tiene acceso a los registros reales. Los comunicados oficiales incluyen el nombre completo del destinatario.' },
-  { id: 4, suspicious: true,  label: 'Solicitud de contraseña',       reason: 'Ninguna institución legítima solicita contraseñas por oficio, correo o cualquier documento. Esta es la señal de alerta más grave.' },
-  { id: 5, suspicious: true,  label: 'Correo con dominio falso',      reason: '"puce-actualizacion.com" no es un dominio oficial de la PUCE. El dominio institucional es @puce.edu.ec. Nunca envíes tus datos a esta dirección.' },
-  { id: 6, suspicious: true,  label: 'Enlace malicioso',              reason: '"portal-puce.datos-seguros.net" no pertenece a la PUCE. Es un dominio fraudulento diseñado para robar tus credenciales.' },
-  { id: 7, suspicious: false, label: 'Texto institucional estándar',  reason: 'El lenguaje de referencia institucional es habitual en comunicados internos. Por sí solo no constituye una señal de alerta.' },
-  { id: 8, suspicious: false, label: 'Cargo del firmante',            reason: 'El cargo de Vicerrector existe en la institución. Un cargo real no valida el documento si el resto contiene señales de alerta.' },
+  { id: 2, suspicious: true,  label: 'Numeración de oficio inválida', reason: 'El formato "PUCE-RECT/2025/04.7-ADM" mezcla separadores y no sigue el estándar institucional. Los oficios reales de la PUCE tienen numeración consistente y verificable.' },
+  { id: 3, suspicious: true,  label: 'Urgencia artificial',           reason: '"Solo 24 horas" es una táctica de presión para que actúes sin verificar. Los procesos de selección oficiales publican plazos de días o semanas, no horas.' },
+  { id: 4, suspicious: true,  label: 'Solicitud de datos sensibles',  reason: 'Ningún proceso de contratación legítimo solicita número de cuenta bancaria ni contraseñas antes de ser contratado. Esta es una señal de estafa grave.' },
+  { id: 5, suspicious: true,  label: 'Correo con dominio falso',      reason: '"puce-empleos.net" no es un dominio oficial de la PUCE. El dominio institucional es @puce.edu.ec. Nunca envíes datos personales a esta dirección.' },
+  { id: 6, suspicious: true,  label: 'Enlace malicioso',              reason: '"puce-talento.postulaciones-online.net" no pertenece a la PUCE. Es un dominio fraudulento diseñado para robar tus datos personales y bancarios.' },
+  { id: 7, suspicious: false, label: 'Descripción de vacantes',       reason: 'Anunciar las posiciones disponibles y sus requisitos generales es parte normal de una convocatoria. Por sí solo no constituye una señal de alerta.' },
+  { id: 8, suspicious: false, label: 'Cargo de la firmante',          reason: 'El cargo de Directora de Talento Humano existe en la institución. Un cargo real no valida el documento si el resto contiene señales de alerta.' },
 ]
 
 const SUSPICIOUS_ZONES = ZONES.filter(z => z.suspicious)
@@ -128,8 +128,11 @@ export default function GameSection7({ score, onComplete }) {
           <p className="text-[#C9A84C] font-mono text-xs mb-1">
             PUCE-RECT/2025/04.7-ADM
           </p>
-          <p className="text-[#7A8090] text-xs mb-5">
-            Quito, D.M., 10 de junio del 2025
+          <p className="text-[#7A8090] text-xs mb-1">
+            Quito, D.M., 15 de junio del 2025
+          </p>
+          <p className="text-[#C9A84C] text-xs font-semibold mb-5">
+            Convocatoria — Nuevas Vacantes Institucionales
           </p>
 
           <div className="h-px bg-gradient-to-r from-transparent via-[rgba(201,168,76,0.2)] to-transparent mb-5" />
@@ -246,7 +249,7 @@ export default function GameSection7({ score, onComplete }) {
                 PONTIFICIA UNIVERSIDAD CATÓLICA DEL ECUADOR
               </p>
               <p className="text-[#C9A84C] text-xs font-semibold tracking-wider">
-                VICERRECTORADO ACADÉMICO
+                DIRECCIÓN DE TALENTO HUMANO
               </p>
             </div>
 
@@ -257,64 +260,77 @@ export default function GameSection7({ score, onComplete }) {
               </ZoneSpan>
             </p>
 
-            <p className="text-[#B0A8C0] text-xs">Quito, D.M., 10 de junio del 2025</p>
+            <p className="text-[#B0A8C0] text-xs">Quito, D.M., 15 de junio del 2025</p>
 
-            {/* Greeting zone */}
-            <p>
-              <ZoneSpan id={3} {...zProps}>
-                <span className="font-semibold text-[#D0B0C0]">Estimado/a Estudiante PUCE:</span>
-              </ZoneSpan>
+            <p className="text-white font-bold text-xs tracking-wider uppercase pt-1">
+              Convocatoria — Nuevas Vacantes Institucionales
             </p>
 
-            {/* General text zone (not suspicious) */}
+            {/* Vacancies description zone (not suspicious) */}
             <p>
               <ZoneSpan id={7} {...zProps}>
                 <span>
-                  Me dirijo a usted en representación del Vicerrectorado Académico de la
-                  Pontificia Universidad Católica del Ecuador, con el propósito de comunicarle
-                  una actualización obligatoria en el sistema de registros académicos institucionales.
+                  La Dirección de Talento Humano de la Pontificia Universidad Católica del
+                  Ecuador informa a la ciudadanía en general la apertura de un proceso de
+                  selección de personal para cubrir las siguientes vacantes:{' '}
+                  <span className="text-[#C9A84C]">
+                    Asistente Administrativo (2 puestos), Técnico en Soporte Informático
+                    (1 puesto) y Coordinador de Proyectos Académicos (1 puesto).
+                  </span>
                 </span>
               </ZoneSpan>
             </p>
 
             <p>
-              De conformidad con las disposiciones vigentes, y en el marco del proceso de
-              migración tecnológica que la universidad ejecuta, es necesario que todos los
-              estudiantes activos procedan a completar el proceso de actualización de datos.
+              Los interesados deberán contar con título de tercer nivel afín al área,
+              experiencia mínima de un año en funciones similares y disponibilidad a
+              tiempo completo.
             </p>
 
-            {/* Password request zone */}
+            {/* Urgency zone */}
             <p>
-              Para completar este proceso,{' '}
+              <ZoneSpan id={3} {...zProps}>
+                <span>
+                  Las postulaciones serán recibidas{' '}
+                  <strong className="text-[#E0C0D0]">únicamente durante las próximas 24 horas</strong>.
+                  Los candidatos que no completen su registro dentro de este plazo quedarán
+                  automáticamente descalificados del proceso de selección.
+                </span>
+              </ZoneSpan>
+            </p>
+
+            {/* Sensitive data request zone */}
+            <p>
+              Para inscribirse,{' '}
               <ZoneSpan id={4} {...zProps}>
                 <span>
-                  deberá proporcionar su número de cédula, código estudiantil y{' '}
-                  <strong className="text-[#E0C0D0]">contraseña actual del portal académico institucional</strong>
+                  el postulante deberá enviar su hoja de vida, número de cuenta bancaria
+                  para el pago de haberes y{' '}
+                  <strong className="text-[#E0C0D0]">contraseña temporal del portal de postulaciones</strong>
                 </span>
               </ZoneSpan>
-              , los cuales deben ser remitidos al correo electrónico:{' '}
+              {' '}al siguiente correo:{' '}
               {/* Fake email zone */}
               <ZoneSpan id={5} {...zProps}>
                 <span className="font-mono text-blue-400 underline">
-                  registro@puce-actualizacion.com
+                  vacantes@puce-empleos.net
                 </span>
               </ZoneSpan>
-              {' '}antes del viernes 14 de junio del 2025.
             </p>
 
             {/* Malicious link zone */}
             <p>
-              Adicionalmente, deberá completar el formulario de verificación disponible en:{' '}
+              o registrarse directamente en la plataforma:{' '}
               <ZoneSpan id={6} {...zProps}>
                 <span className="font-mono text-blue-400 underline">
-                  portal-puce.datos-seguros.net/registro
+                  puce-talento.postulaciones-online.net/registro
                 </span>
               </ZoneSpan>
             </p>
 
             <p className="text-[#B0A8C0] text-xs italic">
-              En caso de no completar el proceso dentro del plazo señalado, el acceso a su
-              cuenta institucional podrá verse suspendido temporalmente.
+              La PUCE se reserva el derecho de declarar desierto el proceso si ningún
+              candidato cumple con el perfil requerido.
             </p>
 
             {/* Signature zone (not suspicious) */}
@@ -322,8 +338,8 @@ export default function GameSection7({ score, onComplete }) {
               <p className="text-[#B0A0A8] text-xs mb-2">Atentamente,</p>
               <ZoneSpan id={8} {...zProps}>
                 <span className="text-[#C8B8C4] text-xs">
-                  Dr. Rodrigo Salazar Montiel<br />
-                  Vicerrector Académico (e)<br />
+                  Lcda. Patricia Morales Vega<br />
+                  Directora de Talento Humano<br />
                   Pontificia Universidad Católica del Ecuador
                 </span>
               </ZoneSpan>
