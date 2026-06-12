@@ -6,7 +6,6 @@ const BASE_MAX = 150
 
 const ZONES = [
   { id: 1, suspicious: true,  label: 'Logo falso',                    reason: 'El logo en la cabecera no es el oficial de la PUCE. Los documentos institucionales siempre usan el logo y colores oficiales verificados.' },
-  { id: 2, suspicious: true,  label: 'Numeración de oficio inválida', reason: 'El formato "PUCE-RECT/2025/04.7-ADM" mezcla separadores y no sigue el estándar institucional. Los oficios reales de la PUCE tienen numeración consistente y verificable.' },
   { id: 3, suspicious: true,  label: 'Urgencia artificial',           reason: '"Solo 24 horas" es una táctica de presión para que actúes sin verificar. Los procesos de selección oficiales publican plazos de días o semanas, no horas.' },
   { id: 4, suspicious: true,  label: 'Solicitud de datos sensibles',  reason: 'Ningún proceso de contratación legítimo solicita número de cuenta bancaria ni contraseñas antes de ser contratado. Esta es una señal de estafa grave.' },
   { id: 5, suspicious: true,  label: 'Correo con dominio falso',      reason: '"puce-empleos.net" no es un dominio oficial de la PUCE. El dominio institucional es @puce.edu.ec. Nunca envíes datos personales a esta dirección.' },
@@ -140,7 +139,7 @@ export default function GameSection7({ score, onComplete }) {
           <p className="text-[#C8A8B8] text-xs leading-relaxed mb-5">
             Abre el documento y toca todo lo que te parezca sospechoso.
             ¿Puedes encontrar las{' '}
-            <span className="text-[#C9A84C] font-bold">6 señales de alerta</span>?
+            <span className="text-[#C9A84C] font-bold">5 señales de alerta</span>?
           </p>
 
           <button onClick={handleOpen} className="w-full group relative">
@@ -253,11 +252,9 @@ export default function GameSection7({ score, onComplete }) {
               </p>
             </div>
 
-            {/* Oficio number zone */}
+            {/* Oficio number */}
             <p className="text-[#D8C8D4] text-xs font-mono">
-              <ZoneSpan id={2} {...zProps}>
-                <span>Oficio No. PUCE-RECT/2025/04.7-ADM</span>
-              </ZoneSpan>
+              Oficio No. PUCE-RECT/2025/04.7-ADM
             </p>
 
             <p className="text-[#B0A8C0] text-xs">Quito, D.M., 15 de junio del 2025</p>
@@ -271,7 +268,7 @@ export default function GameSection7({ score, onComplete }) {
               <ZoneSpan id={7} {...zProps}>
                 <span>
                   La Dirección de Talento Humano de la Pontificia Universidad Católica del
-                  Ecuador informa a la ciudadanía en general la apertura de un proceso de
+                  Ecuador informa la apertura de un proceso de
                   selección de personal para cubrir las siguientes vacantes:{' '}
                   <span className="text-[#C9A84C]">
                     Asistente Administrativo (2 puestos), Técnico en Soporte Informático
