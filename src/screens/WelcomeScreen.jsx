@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 
 const DIALOGUES = [
-  "¡Bienvenido, agente! Soy FALCON, el guardián de la información de la PUCE. Vigilo cada rincón de la red para proteger a nuestra comunidad.",
+  "¡Bienvenido, agente! Soy FALCON, uno de los guardianes de la información de la PUCE. Vigilo cada rincón de la red para proteger a nuestra comunidad.",
   "Los atacantes son astutos... usan correos falsos, enlaces trampa y mensajes engañosos. A eso se le llama phishing, y es más común de lo que crees.",
   "Es hora de poner a prueba tus conocimientos. ¿Tienes el ojo de águila para detectarlos? ¡Demuéstralo!"
 ]
@@ -120,12 +120,12 @@ export default function WelcomeScreen({ onStart }) {
           Dirección de Informática - Seguridad de la Información
         </p>
         <h1 className="text-4xl md:text-5xl font-black text-white leading-tight">
-          Agente{' '}
+          Guardian {' '}
           <span
             className="text-transparent bg-clip-text"
             style={{ backgroundImage: 'linear-gradient(135deg, #C9A84C, #F0D080, #A07830)' }}
           >
-            Seguro
+            de la Información
           </span>
         </h1>
         <p className="text-[#C9A84C] text-sm font-light mt-1 tracking-wider">
