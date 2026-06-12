@@ -7,14 +7,14 @@ const TOTAL_TIME = 50
 // earned is set when a final choice is made
 
 const CALLER = {
-  name: 'Soporte TI — PUCE',
+  name: 'Soporte PUCE',
   number: '+593 2 299-1700',
   subtitle: 'Número no registrado',
 }
 
 const SCRIPT = {
   incoming: {
-    prompt: 'Tienes una llamada entrante de alguien que dice ser del departamento de Tecnologías de la Información de la PUCE.',
+    prompt: 'Tienes una llamada entrante de alguien que dice ser de la Dirección de Informática - Seguridad de la Información de la PUCE.',
     question: '¿Qué haces?',
     options: [
       {
@@ -38,7 +38,7 @@ const SCRIPT = {
     ],
   },
   round1: {
-    caller: '"Buenos días, somos del departamento de TI de la PUCE. Estamos actualizando el sistema y necesitamos que nos confirme su usuario y contraseña para que no pierda acceso."',
+    caller: '"Buenos días, somos de la Dirección de Informática de la PUCE. Estamos actualizando el sistema y necesitamos que nos confirme su usuario y contraseña para que no pierda acceso."',
     question: '¿Qué respondes?',
     options: [
       {
@@ -48,7 +48,7 @@ const SCRIPT = {
         earned: 0,
         next: 'result',
         correct: false,
-        feedback: 'Gravísimo error. Nunca, bajo ninguna circunstancia, compartas tus credenciales por teléfono. Ningún departamento de TI legítimo las pedirá así.',
+        feedback: 'Gravísimo error. Nunca, bajo ninguna circunstancia, compartas tus credenciales por teléfono. Ninguna Dirección de Informática legítima las pedirá así.',
       },
       {
         id: 'verify',

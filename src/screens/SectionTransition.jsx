@@ -117,7 +117,7 @@ export default function SectionTransition({ sectionNum, sectionEarned, totalScor
       <div className="animate-float mb-8">
         <img
           src="/img/mascota-puce.png"
-          alt="HALCON"
+          alt="FALCON"
           className="h-44 object-contain"
           style={{ filter: 'drop-shadow(0 8px 28px rgba(122,25,48,0.55))' }}
         />

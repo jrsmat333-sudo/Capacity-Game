@@ -16,7 +16,7 @@ export default function GameHeader({ section, timeLeft, totalTime, instruction, 
 
         {/* Section progress dots */}
         <div className="flex items-center gap-1.5">
-          {Array.from({ length: 6 }, (_, i) => (
+          {Array.from({ length: 7 }, (_, i) => (
             <div
               key={i}
               className="rounded-full transition-all duration-500"
@@ -34,7 +34,7 @@ export default function GameHeader({ section, timeLeft, totalTime, instruction, 
               }}
             />
           ))}
-          <span className="text-[#5A3040] text-xs ml-1 font-semibold">{section}/6</span>
+          <span className="text-[#5A3040] text-xs ml-1 font-semibold">{section}/7</span>
         </div>
 
         {/* Score */}
@@ -85,7 +85,7 @@ export default function GameHeader({ section, timeLeft, totalTime, instruction, 
         <div
           className="h-full rounded-full transition-all duration-700"
           style={{
-            width: `${((section - 1) / 6) * 100}%`,
+            width: `${((section - 1) / 7) * 100}%`,
             background: 'linear-gradient(to right, #7A1930, #C9A84C)',
           }}
         />

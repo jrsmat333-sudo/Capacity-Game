@@ -1,18 +1,19 @@
 import { useState, useEffect } from 'react'
 
 const DIALOGUES = [
-  "¡Bienvenido, agente! Soy HALCON, el guardián digital de la PUCE. Vigilo cada rincón de la red para proteger a nuestra comunidad.",
+  "¡Bienvenido, agente! Soy FALCON, el guardián de la información de la PUCE. Vigilo cada rincón de la red para proteger a nuestra comunidad.",
   "Los atacantes son astutos... usan correos falsos, enlaces trampa y mensajes engañosos. A eso se le llama phishing, y es más común de lo que crees.",
   "Es hora de poner a prueba tus conocimientos. ¿Tienes el ojo de águila para detectarlos? ¡Demuéstralo!"
 ]
 
 const STAGES = [
   { label: 'Correo', icon: '✉' },
-  { label: 'Enlace', icon: '🔗' },
-  { label: 'SMS', icon: '💬' },
-  { label: 'Web', icon: '🌐' },
-  { label: 'Llamada', icon: '📞' },
-  { label: 'Red Social', icon: '📱' },
+  { label: 'Alias', icon: '🔗' },
+  { label: 'Enlace', icon: '💬' },
+  { label: 'E-mail', icon: '🌐' },
+  { label: 'Mensaje', icon: '📞' },
+  { label: 'Llamada', icon: '📱' },
+  { label: 'Oficio', icon: '📄' },
 ]
 
 export default function WelcomeScreen({ onStart }) {
@@ -116,7 +117,7 @@ export default function WelcomeScreen({ onStart }) {
         style={{ transitionDelay: '300ms' }}
       >
         <p className="text-[#C9A84C] text-xs font-semibold tracking-[0.35em] uppercase mb-2">
-          Seguridad Digital PUCE
+          Dirección de Informática - Seguridad de la Información
         </p>
         <h1 className="text-4xl md:text-5xl font-black text-white leading-tight">
           Agente{' '}
@@ -207,7 +208,7 @@ export default function WelcomeScreen({ onStart }) {
           {/* Click hint */}
           {showHint && dialogueIndex < 0 && (
             <div className="absolute -top-8 left-1/2 -translate-x-1/2 text-[#C9A84C] text-xs font-medium animate-[blink_1.4s_ease-in-out_infinite] whitespace-nowrap">
-              Toca para conocer a HALCON
+              Toca para conocer a FALCON
             </div>
           )}
 
@@ -216,7 +217,7 @@ export default function WelcomeScreen({ onStart }) {
           >
             <img
               src="/img/mascota-puce.png"
-              alt="HALCON mascota PUCE"
+              alt="FALCON mascota PUCE"
               className="h-52 md:h-64 object-contain drop-shadow-2xl transition-transform duration-200 group-hover:scale-105 group-active:scale-95"
               style={{ filter: 'drop-shadow(0 8px 24px rgba(122,25,48,0.5))' }}
             />
@@ -233,7 +234,7 @@ export default function WelcomeScreen({ onStart }) {
             transitionDelay: '600ms'
           }}
         >
-          HALCON — Guardian Digital
+          FALCON — Guardián de la Información
         </div>
 
         {/* Start button — only after last dialogue */}
@@ -254,7 +255,7 @@ export default function WelcomeScreen({ onStart }) {
         {/* If no dialogue yet, show start CTA after a delay */}
         {dialogueIndex < 0 && !showHint && (
           <div className="mt-6 text-[#7A7080] text-xs text-center animate-fade-in">
-            Habla con HALCON para comenzar
+            Habla con FALCON para comenzar
           </div>
         )}
       </div>
@@ -265,7 +266,7 @@ export default function WelcomeScreen({ onStart }) {
         style={{ transitionDelay: '800ms' }}
       >
         <p className="text-[#C9A84C] text-xs font-semibold tracking-[0.2em] uppercase text-center mb-3">
-          6 Secciones de Desafio
+          7 Secciones de Desafio
         </p>
         <div className="flex gap-2 justify-center">
           {STAGES.map((stage, i) => (

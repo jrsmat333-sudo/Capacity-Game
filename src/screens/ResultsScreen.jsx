@@ -5,15 +5,16 @@ const SECTION_DATA = [
   { section: 4, name: 'El correo trampa completo', icon: '🌐', max: 150, tip: 'Desconfía de correos con urgencia, saludos genéricos o solicitud de datos.' },
   { section: 5, name: 'El mensaje sospechoso',     icon: '📞', max: 100, tip: 'Los SMS legítimos no piden hacer clic en links para ingresar credenciales.' },
   { section: 6, name: 'La llamada inesperada',     icon: '📱', max: 150, tip: 'Ninguna entidad legítima pedirá tu contraseña por teléfono. Siempre cuelga y verifica.' },
+  { section: 7, name: 'El oficio falso',           icon: '📄', max: 150, tip: 'Los oficios institucionales nunca piden contraseñas ni datos bancarios. Verifica siempre el dominio y el logo oficial.' },
 ]
 
-const TOTAL_BASE_MAX = 700
+const TOTAL_BASE_MAX = 850
 
 const LEVELS = [
   { min: 0,   max: 40,  label: 'Aún en entrenamiento',           desc: 'Repasa el material antes de seguir — los atacantes cuentan con esto.',       color: '#EF4444' },
   { min: 41,  max: 70,  label: 'Vas por buen camino',            desc: 'Refuerza los temas donde fallaste y vuelve a intentarlo.',                    color: '#F59E0B' },
   { min: 71,  max: 90,  label: 'Buen detector',                   desc: 'Estás casi listo para proteger a tu entorno digital.',                        color: '#4ADE80' },
-  { min: 91,  max: 100, label: 'Agente seguro nivel experto',     desc: 'Eres la primera línea de defensa de la PUCE.',                               color: '#C9A84C' },
+  { min: 91,  max: 100, label: 'Guardián de la Información nivel experto', desc: 'Eres la primera línea de defensa de la PUCE.',                       color: '#C9A84C' },
 ]
 
 function getLevel(pct) {
@@ -161,7 +162,7 @@ export default function ResultsScreen({ score, sectionResults, onRestart, onHome
       {/* Mascot */}
       <div className="flex justify-center mb-6 z-10">
         <div className="animate-float-slow">
-          <img src="/img/mascota-puce.png" alt="HALCON" className="h-28 object-contain" style={{ filter: 'drop-shadow(0 6px 16px rgba(122,25,48,0.4))' }} />
+          <img src="/img/mascota-puce.png" alt="FALCON" className="h-28 object-contain" style={{ filter: 'drop-shadow(0 6px 16px rgba(122,25,48,0.4))' }} />
         </div>
       </div>
 

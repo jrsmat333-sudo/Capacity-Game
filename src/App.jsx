@@ -8,11 +8,12 @@ import GameSection3 from './screens/GameSection3'
 import GameSection4 from './screens/GameSection4'
 import GameSection5 from './screens/GameSection5'
 import GameSection6 from './screens/GameSection6'
+import GameSection7 from './screens/GameSection7'
 import ResultsScreen from './screens/ResultsScreen'
 
-const TOTAL_SECTIONS = 6
+const TOTAL_SECTIONS = 7
 
-const SECTION_MAX = [100, 100, 100, 150, 100, 150]
+const SECTION_MAX = [100, 100, 100, 150, 100, 150, 150]
 
 export default function App() {
   const [phase, setPhase] = useState('welcome')
@@ -95,6 +96,7 @@ export default function App() {
     if (currentSection === 4) return <GameSection4 {...props} />
     if (currentSection === 5) return <GameSection5 {...props} />
     if (currentSection === 6) return <GameSection6 {...props} />
+    if (currentSection === 7) return <GameSection7 {...props} />
   }
 
   return null
