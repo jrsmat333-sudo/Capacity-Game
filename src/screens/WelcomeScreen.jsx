@@ -98,7 +98,7 @@ export default function WelcomeScreen({ onStart }) {
           style={{ transitionDelay: '100ms' }}
         >
           <img
-            src="/img/logo-puce.png"
+            src="./img/logo-puce.png"
             alt="Logo PUCE"
             className="h-16 object-contain drop-shadow-lg"
           />
@@ -216,7 +216,7 @@ export default function WelcomeScreen({ onStart }) {
             className={`transition-all duration-700 ${mascotLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-90'} animate-float`}
           >
             <img
-              src="/img/mascota-puce.png"
+              src="./img/mascota-puce.png"
               alt="FALCON mascota PUCE"
               className="h-52 md:h-64 object-contain drop-shadow-2xl transition-transform duration-200 group-hover:scale-105 group-active:scale-95"
               style={{ filter: 'drop-shadow(0 8px 24px rgba(122,25,48,0.5))' }}

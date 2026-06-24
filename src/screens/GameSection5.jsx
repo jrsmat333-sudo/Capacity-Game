@@ -121,7 +121,7 @@ export default function GameSection5({ score, onComplete }) {
             <div className="flex items-center gap-3 px-4 py-3" style={{ borderBottom: '1px solid rgba(201,168,76,0.08)' }}>
               {item.type === 'email' ? (
                 <div className="w-10 h-10 rounded-full overflow-hidden flex items-center justify-center flex-shrink-0" style={{ background: '#1A2A3A' }}>
-                  <img src="/img/logo-verdadero.png" alt="PUCE" className="w-8 h-8 object-contain" />
+                  <img src="./img/logo-verdadero.png" alt="PUCE" className="w-8 h-8 object-contain" />
                 </div>
               ) : (
                 <div className="w-10 h-10 rounded-full flex items-center justify-center font-black text-lg text-white flex-shrink-0" style={{ background: item.avatarBg }}>
@@ -143,7 +143,7 @@ export default function GameSection5({ score, onComplete }) {
               {item.type === 'email' && item.fullContent ? (
                 <div>
                   <div className="flex items-center gap-3 mb-4 pb-3" style={{ borderBottom: '1px solid rgba(201,168,76,0.07)' }}>
-                    <img src="/img/logo-verdadero.png" alt="PUCE" className="h-8 object-contain" />
+                    <img src="./img/logo-verdadero.png" alt="PUCE" className="h-8 object-contain" />
                     <div>
                       <p className="text-white text-xs font-black">PUCE</p>
                       <p className="text-[#9A8090] text-[10px]">{item.fullContent.subheading}</p>
@@ -235,7 +235,7 @@ export default function GameSection5({ score, onComplete }) {
                 <div className="relative flex-shrink-0">
                   {item.type === 'email' ? (
                     <div className="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center" style={{ background: '#1A2A3A' }}>
-                      <img src="/img/logo-verdadero.png" alt="PUCE" className="w-10 h-10 object-contain" />
+                      <img src="./img/logo-verdadero.png" alt="PUCE" className="w-10 h-10 object-contain" />
                     </div>
                   ) : (
                     <div className="w-12 h-12 rounded-full flex items-center justify-center font-black text-lg text-white" style={{ background: item.avatarBg }}>

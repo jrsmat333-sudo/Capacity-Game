@@ -232,7 +232,7 @@ export default function GameSection7({ score, onComplete }) {
                 }}
               >
                 <img
-                  src="/img/nuevo-modulo.png"
+                  src="./img/nuevo-modulo.png"
                   alt="Logo"
                   className="h-16 object-contain"
                 />

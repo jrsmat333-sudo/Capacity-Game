@@ -46,7 +46,7 @@ export default function ResultsScreen({ score, sectionResults, onRestart, onHome
 
       {/* Header */}
       <div className="flex flex-col items-center pt-8 pb-4 px-6 z-10 animate-fade-in">
-        <img src="/img/logo-puce.png" alt="PUCE" className="h-10 object-contain opacity-70 mb-6" />
+        <img src="./img/logo-puce.png" alt="PUCE" className="h-10 object-contain opacity-70 mb-6" />
 
         <p className="text-[#C9A84C] text-xs font-semibold tracking-[0.35em] uppercase mb-2">Resultados finales</p>
 
@@ -162,7 +162,7 @@ export default function ResultsScreen({ score, sectionResults, onRestart, onHome
       {/* Mascot */}
       <div className="flex justify-center mb-6 z-10">
         <div className="animate-float-slow">
-          <img src="/img/mascota-puce.png" alt="FALCON" className="h-28 object-contain" style={{ filter: 'drop-shadow(0 6px 16px rgba(122,25,48,0.4))' }} />
+          <img src="./img/mascota-puce.png" alt="FALCON" className="h-28 object-contain" style={{ filter: 'drop-shadow(0 6px 16px rgba(122,25,48,0.4))' }} />
         </div>
       </div>
 

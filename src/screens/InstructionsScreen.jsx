@@ -81,7 +81,7 @@ export default function InstructionsScreen({ onReady }) {
 
       {/* Header */}
       <header className="w-full flex justify-center pt-8 pb-2 z-10 animate-fade-in">
-        <img src="/img/logo-puce.png" alt="Logo PUCE" className="h-10 object-contain opacity-70" />
+        <img src="./img/logo-puce.png" alt="Logo PUCE" className="h-10 object-contain opacity-70" />
       </header>
 
       {/* Main content */}
@@ -237,7 +237,7 @@ export default function InstructionsScreen({ onReady }) {
             className={`cursor-pointer transition-transform duration-200 hover:scale-110 active:scale-95 ${nekoPulsed ? 'animate-wiggle' : ''}`}
           >
             <img
-              src="/img/neko-puce.png"
+              src="./img/neko-puce.png"
               alt="Neko PUCE"
               className="h-24 object-contain"
               style={{ filter: 'drop-shadow(0 -4px 16px rgba(122,25,48,0.6))', marginBottom: '-40px' }}
